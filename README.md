@@ -5,13 +5,10 @@ green orbs that spawn on the ground (and sometimes drop from monsters).
 
 ## Run
 ```
-flutter create --platforms=android,ios .   # generates the platform folders (keeps lib/ and assets/)
 flutter pub get
 flutter run
 ```
 Portrait orientation. Controls: on-screen joystick + attack/dash buttons (WASD/arrows, Space, E on desktop).
 
-## CI
-`.github/workflows/build.yml` generates the `android/` folder with `flutter create` (the repo doesn't ship it)
-and then runs `flutter build apk --release`. If your IDE uses its own workflow, add the same
-"Generate Android platform files" step before `flutter build apk`.
+## Android
+The `android/` folder is included (Gradle Kotlin DSL: AGP 8.9.1, Gradle 8.12, Kotlin 2.1.0), so `flutter build apk --release` works directly.
