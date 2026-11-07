@@ -10,3 +10,8 @@ flutter pub get
 flutter run
 ```
 Portrait orientation. Controls: on-screen joystick + attack/dash buttons (WASD/arrows, Space, E on desktop).
+
+## CI
+`.github/workflows/build.yml` generates the `android/` folder with `flutter create` (the repo doesn't ship it)
+and then runs `flutter build apk --release`. If your IDE uses its own workflow, add the same
+"Generate Android platform files" step before `flutter build apk`.
